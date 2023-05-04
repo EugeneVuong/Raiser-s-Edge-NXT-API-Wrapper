@@ -4,7 +4,7 @@ from raiseredge import RaiserEdge
 '''
 Creating Event Script
 Make sure the spreadsheet has the rows following this order with the same name: "Event_name", "Event_Date", "Event_Time", "ID"
-Make sure to add your access_key and oauth key in Line 25
+Make sure to add your access_key and oauth key from Line 25 to Line 27
 '''
 
 # Add Event Path
@@ -22,7 +22,9 @@ for i in range(1, max_col + 1):
 
 max_row = sheet.max_row
 
-re = RaiserEdge(access_key='', oauth='')
+access = '' # Add your Primary Access Key
+auth = '' # Add your OAUTH Key
+re = RaiserEdge(access_key=access, oauth=auth)
 
 for i in range(2, max_row + 1):
     if sheet.cell(row = i, column = 1) != 'Event_name':
