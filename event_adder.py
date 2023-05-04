@@ -1,10 +1,13 @@
 import openpyxl
 from raiseredge import RaiserEdge 
 
-'''Creating Event Script'''
-
 '''
-path = "C:\\Users\\STSC\\Documents\\Programming\\Python\\Raiser's Edge NXT API Wrapper\\Event_Date_Details.xlsx"
+Creating Event Script
+Make sure the spreadsheet has the rows following this order with the same name: "Event_name", "Event_Date", "Event_Time", "ID"
+'''
+
+# Add Event Path
+path = ""
 wb = openpyxl.load_workbook(path)
 sheet = wb.active
 max_col = sheet.max_column
@@ -43,7 +46,7 @@ for i in range(2, max_row + 1):
         print("Imported: " + sheet.cell(row = i, column = 1).value)
         print(re.create_event(**json_data))
 
-'''
+
 
 
 
