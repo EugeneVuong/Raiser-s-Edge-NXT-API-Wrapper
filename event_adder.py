@@ -4,6 +4,7 @@ from raiseredge import RaiserEdge
 '''
 Creating Event Script
 Make sure the spreadsheet has the rows following this order with the same name: "Event_name", "Event_Date", "Event_Time", "ID"
+Make sure to add your access_key and oauth key in Line 25
 '''
 
 # Add Event Path
